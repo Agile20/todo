@@ -1,0 +1,112 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Заголовки */
+h1 {
+    color: #007BFF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Форма */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* Список задач */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+li:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопки удаления */
+.delete-btn {
+    background: transparent;
+    color: #DC3545;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    color: #C82333;
+}
+
+/* Глобальные стили для сообщений об ошибках */
+.error {
+    color: #DC3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Глобальные стили для сообщений об успехе */
+.success {
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}

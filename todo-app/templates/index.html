@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Todo List</h1>
+    
+    <form method="POST" action="/add_todo">
+        <input type="text" name="title" placeholder="Название задачи" required>
+        <textarea name="description" placeholder="Описание задачи" required></textarea>
+        <button type="submit">Добавить задачу</button>
+    </form>
+    
+
+    <h1>Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <strong>{{ task.title }}</strong><br>
+                {{ task.description }}<br>
+                <a href="{{ url_for('edit_todo', id=task.id) }}">Edit</a> 
+                <a href="{{ url_for('delete_todo', id=task.id) }}">Delete</a>
+
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
